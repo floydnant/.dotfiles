@@ -64,7 +64,7 @@ return packer.startup(function(use)
 	use({
         "nvim-telescope/telescope.nvim",
         branch = "0.1.x",
-        -- use the telescope lazygit plugin -- doesn't seem to work
+        -- use the telescope lazygit plugin - doesn't seem to work
         -- requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
         -- config = function()
         --     require("telescope").load_extension("lazygit")

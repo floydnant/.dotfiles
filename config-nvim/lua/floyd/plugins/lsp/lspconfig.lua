@@ -82,7 +82,6 @@ lspconfig["tailwindcss"].setup({
 	on_attach = on_attach,
 })
 
--- lspconfig["eslint"].setup()
 -- lspconfig["angularls"].setup()
 -- lspconfig["emmet_ls"].setup()
 -- lspconfig["jsonls"].setup()
@@ -107,4 +106,3 @@ lspconfig["sumneko_lua"].setup({
 		},
 	},
 })
-

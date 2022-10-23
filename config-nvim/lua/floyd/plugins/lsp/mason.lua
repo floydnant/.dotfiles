@@ -27,10 +27,9 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"sumneko_lua",
-        "angularls",
-        "eslint",
+        -- "angularls",
         "emmet_ls",
-        "jsonls",
+        -- "jsonls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed

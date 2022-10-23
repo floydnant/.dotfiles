@@ -3,6 +3,15 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- Functional wrapper for mapping custom keybindings
+-- local function noremap(mode, lhs, rhs, opts)
+-- 	local options = { noremap = true }
+-- 	if opts then
+-- 		options = vim.tbl_extend("force", options, opts)
+-- 	end
+-- 	keymap.set(mode, lhs, rhs, options)
+-- end
+
 ---------------------
 -- General Keymaps
 ---------------------
@@ -12,6 +21,26 @@ keymap.set("i", "jk", "<ESC>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
+
+-- swap lines -- @TODO: none of those seem to work
+-- :nnoremap <C-Up> <Up>"add"ap<Up>
+-- :nnoremap <C-Down> "add"ap
+-- keymap.set("n", "<C-k>", ':let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>')
+-- keymap.set("n", "<C-j>", ':let save_a=@a<Cr>"add"ap:let @a=save_a<Cr>')
+--
+-- noremap("n", "<C-j>", ":m .+1<CR>==")
+-- keymap.set("n", "<A>k", ":m .-2<CR>==")
+-- keymap.set("i", "<A>j", "<Esc>:m .+1<CR>==gi")
+-- keymap.set("i", "<A>k", "<Esc>:m .-2<CR>==gi")
+-- keymap.set("v", "<A>j", ":m '>+1<CR>gv=gv")
+-- keymap.set("v", "<A>k", ":m '<-2<CR>gv=gv")
+--
+-- vim.cmd([[ nnoremap <A-j> :m .+1<CR>== ]])
+-- nnoremap <A-k> :m .-2<CR>==
+-- inoremap <A-j> <Esc>:m .+1<CR>==gi
+-- inoremap <A-k> <Esc>:m .-2<CR>==gi
+-- vnoremap <A-j> :m '>+1<CR>gv=gv
+-- vnoremap <A-k> :m '<-2<CR>gv=gv
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -60,4 +89,3 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-

@@ -82,9 +82,23 @@ lspconfig["tailwindcss"].setup({
 	on_attach = on_attach,
 })
 
--- lspconfig["angularls"].setup()
--- lspconfig["emmet_ls"].setup()
--- lspconfig["jsonls"].setup()
+-- configure angular lsp
+lspconfig["angularls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure emmet
+lspconfig["emmet_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure json lsp
+lspconfig["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
 
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({

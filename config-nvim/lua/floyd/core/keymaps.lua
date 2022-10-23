@@ -49,16 +49,33 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- keymap.set("n", "<leader>+", "<C-a>") -- increment
 -- keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
--- window management
+-- window management --
+-- panes
 keymap.set("n", "<leader>sy", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sx", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sc", ":close<CR>") -- close current split window
---
+-- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tc", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<C-S-l>", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<C-S-h>", ":tabp<CR>") --  go to next tab
+
+-- terminal
+keymap.set("n", "<leader>tt", ":terminal<CR>")
+keymap.set("n", "<leader>ty", "<C-w>v :terminal<CR>")
+keymap.set("n", "<leader>tx", "<C-w>s :terminal<CR>")
+keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+
+-- npm scripts
+keymap.set("n", "<leader>nd", "<C-w>h :terminal npm run dev<CR>") -- dev server
+keymap.set("n", "<leader>nl", ":!npm run lint<CR>") -- linter
+keymap.set("n", "<leader>nf", ":!npm run lint:fix<CR>") -- linter --fix
+keymap.set("n", "<leader>nu", "<C-w>v :terminal npm run unit:ci<CR>") -- unit tests
+keymap.set("n", "<leader>nc", "<C-w>v :terminal npm run comp:ci<CR>") -- compnent tests
+keymap.set("n", "<leader>ne", "<C-w>v :terminal npm run e2e:ci<CR>") -- e2e tests
 
 ----------------------
 -- Plugin Keybinds

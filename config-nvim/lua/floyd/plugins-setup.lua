@@ -46,8 +46,8 @@ return packer.startup(function(use)
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
 
-    -- lazygit plugin
-    use("kdheepak/lazygit.nvim")
+	-- lazygit plugin
+	use("kdheepak/lazygit.nvim")
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -60,16 +60,16 @@ return packer.startup(function(use)
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-    -- fuzzy finder
+	-- fuzzy finder
 	use({
-        "nvim-telescope/telescope.nvim",
-        branch = "0.1.x",
-        -- use the telescope lazygit plugin - doesn't seem to work
-        -- requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
-        -- config = function()
-        --     require("telescope").load_extension("lazygit")
-        -- end,
-    })
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		-- use the telescope lazygit plugin - doesn't seem to work
+		-- requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
+		-- config = function()
+		--     require("telescope").load_extension("lazygit")
+		-- end,
+	})
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -115,4 +115,3 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-

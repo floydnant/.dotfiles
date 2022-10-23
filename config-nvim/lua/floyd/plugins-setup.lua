@@ -48,6 +48,8 @@ return packer.startup(function(use)
 
 	-- lazygit plugin
 	use("kdheepak/lazygit.nvim")
+	-- diff view
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")

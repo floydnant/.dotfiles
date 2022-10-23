@@ -11,3 +11,4 @@ ln -s ~/.dotfiles/config-nvim ~/.config/nvim
 - [ ] Add complete install automation
 - [x] Add neovim config
 - [ ] Add raycast config
+- [ ] Add The Primeagen's Harpoon plugin to nvim 

@@ -14,15 +14,27 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 -- configure nvim-tree
 nvimtree.setup({
 	-- change folder arrow icons
-        renderer = {
+	renderer = {
 		icons = {
 			glyphs = {
 				folder = {
 					arrow_closed = "▶︎", -- arrow when folder is closed
 					arrow_open = "▼", -- arrow when folder is open
 				},
+				git = {
+					unstaged = "M", -- unstaged = "✗",
+					staged = "✓",
+					unmerged = "",
+					renamed = "R", -- renamed = "➜",
+					untracked = "U", -- untracked = "★",
+					deleted = "D", -- deleted = "",
+					ignored = "◌",
+				},
 			},
 		},
+	},
+	view = {
+		width = 40,
 	},
 	-- disable window_picker for
 	-- explorer to work well with
@@ -35,4 +47,3 @@ nvimtree.setup({
 		},
 	},
 })
-

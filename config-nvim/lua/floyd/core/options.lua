@@ -17,6 +17,9 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
+-- cursor line
+opt.cursorline = true -- highlight the current cursor line
+
 -- appearance
 opt.termguicolors = true
 opt.background = "dark"

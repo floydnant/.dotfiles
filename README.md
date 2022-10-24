@@ -12,6 +12,7 @@ ln -s ~/.dotfiles/config-nvim ~/.config/nvim
 
 - [ ] Add complete install automation
 - [x] Add neovim config
+- [ ] Consider using astro nvim or similar
 - [ ] Further enhance nvim config
   - [ ] Checkout noice
   - [ ] Add The Primeagen's Harpoon plugin to nvim

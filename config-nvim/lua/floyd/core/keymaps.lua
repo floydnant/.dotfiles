@@ -93,6 +93,7 @@ keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
 -- view current git diff
 keymap.set("n", "<leader>fd", ":DiffviewOpen<CR>")
+keymap.set("n", "<leader>fr", ":DiffviewFileHistory %<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore

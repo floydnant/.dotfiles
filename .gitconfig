@@ -1,0 +1,22 @@
+[user]
+	email = floyd.haremsa@berlin-bytes.de
+	name = Floyd Haremsa
+	signingkey = 32D47492331C3F29
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[commit]
+	gpgsign = false # @TODO: Regenerate the GPG key
+[rerere]
+	enabled = true
+
+# delta diff view: https://github.com/dandavison/delta
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default

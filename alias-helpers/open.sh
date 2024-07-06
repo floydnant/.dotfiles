@@ -4,5 +4,5 @@ if [[ -z "$1" ]]
 		open .
 	else
 		echo "opening $1 with Finder..."
-		open $1
+		open $@
 fi

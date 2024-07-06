@@ -4,5 +4,5 @@ if [[ -z "$1" ]]
 		code .
 	else
 		echo "opening $1 with VS Code..."
-		code $1 $2  
+		code $@  
 fi
